@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.travel.TravelApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-17T02:26:54.381Z" hostname="DESKTOP-C85M9PN" time="0.327">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.example.travel.TravelApplicationTests" time="0.327"/>
+  <system-out><![CDATA[11:26:51.109 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.travel.TravelApplicationTests]: TravelApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:26:51.211 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.travel.TravelApplication for test class com.example.travel.TravelApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-17T11:26:51.547+09:00  INFO 18844 --- [Travel] [    Test worker] c.example.travel.TravelApplicationTests  : Starting TravelApplicationTests using Java 17.0.16 with PID 18844 (started by user in C:\work\GitHub\Travel\Travel)
+2025-10-17T11:26:51.547+09:00  INFO 18844 --- [Travel] [    Test worker] c.example.travel.TravelApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2025-10-17T11:26:52.065+09:00  INFO 18844 --- [Travel] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-17T11:26:52.087+09:00  INFO 18844 --- [Travel] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2025-10-17T11:26:52.556+09:00  INFO 18844 --- [Travel] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-17T11:26:52.608+09:00  INFO 18844 --- [Travel] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-17T11:26:52.645+09:00  INFO 18844 --- [Travel] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-17T11:26:52.898+09:00  INFO 18844 --- [Travel] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-17T11:26:52.925+09:00  INFO 18844 --- [Travel] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-17T11:26:53.174+09:00  INFO 18844 --- [Travel] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@356fa0d1
+2025-10-17T11:26:53.175+09:00  INFO 18844 --- [Travel] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-17T11:26:53.287+09:00  WARN 18844 --- [Travel] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-17T11:26:53.359+09:00  INFO 18844 --- [Travel] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-17T11:26:53.595+09:00  INFO 18844 --- [Travel] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-17T11:26:53.599+09:00  INFO 18844 --- [Travel] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-17T11:26:53.630+09:00  WARN 18844 --- [Travel] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-17T11:26:53.740+09:00  INFO 18844 --- [Travel] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-10-17T11:26:54.361+09:00  INFO 18844 --- [Travel] [    Test worker] c.example.travel.TravelApplicationTests  : Started TravelApplicationTests in 3.024 seconds (process running for 3.891)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
