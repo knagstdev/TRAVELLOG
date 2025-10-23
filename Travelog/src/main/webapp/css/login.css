@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #ffffff; /* ✅ 흰 배경 */
+}
+
+/* 로그인 전체 래퍼 */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ✅ 세로 가운데 */
+}
+
+/* 로그인 박스 */
+.login-box {
+    background: #fff;
+    padding: 38px 46px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    width: 300px;
+    text-align: center;
+}
+
+/* 로고 영역 (🐶 + TRAVELOG + 🏠) */
+.logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+.logo-area h1 {
+    color: #1a73e8;
+    font-size: 1.7rem;
+    margin: 0;
+}
+.home-icon {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #1a73e8;
+    transition: 0.2s;
+}
+.home-icon:hover {
+    transform: scale(1.1);
+    color: #00b4d8;
+}
+
+/* 부제 */
+.subtitle {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+/* 입력창 */
+.login-box input {
+    width: 90%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.2s;
+}
+.login-box input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26,115,232,0.1);
+}
+
+/* 버튼 */
+.login-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #1a73e8, #00b4d8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login-btn:hover {
+    background: linear-gradient(90deg, #0077ff, #00a2c7);
+}
+
+/* 하단 링크 */
+.links {
+    margin-top: 16px;
+    font-size: 0.85rem;
+}
+.links a {
+    color: #1a73e8;
+    text-decoration: none;
+    margin: 0 4px;
+}
+
+/* 구분선 */
+.divider {
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #aaa;
+    position: relative;
+}
+.divider::before, .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ddd;
+}
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+/* 소셜 로그인 */
+.social-divider {
+    display:flex; align-items:center; margin:1rem 0;
+}
+.divider-line { flex:1; height:1px; background:#ddd; }
+.divider-text {
+    font-size:0.8rem; color:#6b7280;
+    margin:0 0.5rem;
+}
+.social-buttons {
+    display:flex; justify-content:center; gap:1rem;
+}
+.social-btn {
+    width:48px; height:48px;
+    border-radius:50%; border:1px solid #e5e7eb;
+    background:white; display:flex; align-items:center; justify-content:center;
+    cursor:pointer; transition:all 0.2s;
+}
+.social-btn svg { width:24px; height:24px; }
+.google-btn:hover { background:#f9fafb; border-color:#d1d5db; }
+.kakao-btn:hover { background:#fff3c7; border-color:#fbbf24; }
+.naver-btn:hover { background:#d1fae5; border-color:#10b981; }

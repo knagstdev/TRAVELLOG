@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 중앙 박스 */
+.join-box {
+    width: 380px;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* 제목 */
+.join-box h2 {
+    color: #0096c7;
+    margin-bottom: 24px;
+}
+
+/* 입력창 */
+.join-box input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.join-box input:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 0 2px rgba(0,180,216,0.15);
+}
+
+/* 버튼 */
+.join-box button {
+    width: 100%;
+    background: linear-gradient(90deg, #0096c7, #00b4d8);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.join-box button:hover {
+    opacity: 0.9;
+}
+
+/* 링크 */
+.join-box a {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: #0096c7;
+    text-decoration: none;
+}
+
+.join-box a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 중앙 카드박스 */
+.pw-box {
+    width: 340px;
+    background: #fff;
+    padding: 36px 44px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* 제목 */
+.pw-box h2 {
+    color: #1a73e8;
+    margin-bottom: 20px;
+}
+
+/* 입력창 */
+.pw-box input {
+    width: 100%;
+    padding: 11px 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.pw-box input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26,115,232,0.15);
+}
+
+/* 버튼 */
+.pw-box button {
+    width: 100%;
+    background: linear-gradient(90deg, #1a73e8, #00b4d8);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pw-box button:hover {
+    opacity: 0.9;
+}
+
+/* 링크 */
+.pw-box a {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.pw-box a:hover {
+    text-decoration: underline;
+}

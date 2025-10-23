@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.find-box {
+    width: 340px;
+    background: #fff;
+    padding: 36px 44px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.find-box h2 {
+    color: #0096c7;
+    margin-bottom: 20px;
+}
+
+.find-box input {
+    width: 100%;
+    padding: 11px 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.find-box input:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 0 2px rgba(0,180,216,0.15);
+}
+
+.find-box button {
+    width: 100%;
+    background: linear-gradient(90deg, #0096c7, #00b4d8);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.find-box button:hover {
+    opacity: 0.9;
+}
+
+.find-box a {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: #0096c7;
+    text-decoration: none;
+}
