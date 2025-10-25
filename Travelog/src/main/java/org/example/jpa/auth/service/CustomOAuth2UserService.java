@@ -19,7 +19,7 @@ import java.util.Map;
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
     private final MemberRepository memberRepository;
-    private final MapStruct mapStruct; // ✅ 자동 주입 (componentModel="spring")
+    private final MapStruct mapStruct; // ✅ MapStruct 자동 주입 (componentModel="spring")
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest)
@@ -29,6 +29,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         String registrationId = userRequest.getClientRegistration().getRegistrationId();
         Map<String, Object> attributes = oAuth2User.getAttributes();
 
+        // 소셜 로그인 제공자에 따른 OAuth2UserInfo 생성
         OAuth2UserInfo userInfo = switch (registrationId) {
             case "naver" -> new NaverOAuth2UserInfo((Map<String, Object>) attributes.get("response"));
             case "kakao" -> new KakaoOAuth2UserInfo((Map<String, Object>) attributes);
@@ -38,14 +39,20 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         // ✅ 존재 여부 확인 후 MapStruct로 처리
         Member member = memberRepository.findByEmail(userInfo.getEmail())
                 .map(existing -> {
+                    // 기존 사용자가 있으면 업데이트
                     mapStruct.updateMemberFromUserInfo(userInfo, existing);
                     return existing;
                 })
-                .orElseGet(() -> mapStruct.toEntity(userInfo));
+                .orElseGet(() -> {
+                    // 새로운 사용자는 새로 생성
+                    Member newMember = mapStruct.toEntity(userInfo);
+                    return newMember;
+                });
 
         // ✅ DB 저장
         memberRepository.save(member);
 
+        // 사용자 정보를 CustomOAuth2User로 감싸서 반환
         return new CustomOAuth2User(member, attributes);
     }
 }

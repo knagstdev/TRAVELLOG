@@ -38,11 +38,11 @@ public class SecurityConfig {
                         .logoutUrl("/auth/logout")
                         .permitAll()
                 )
-                // 보안토큰설정: `/inquiries/my/delete` 경로를 CSRF 검사 예외 목록에 추가
-                .csrf(csrf -> csrf
-                        // ✅ 문의 삭제 POST 요청에 대한 CSRF 검사를 무시합니다. (403 Forbidden 해결)
-                        .ignoringRequestMatchers("/inquiries/my/delete", "/ping", "/api/footer/**")
-                )
+//                // 보안토큰설정: `/inquiries/my/delete` 경로를 CSRF 검사 예외 목록에 추가
+//                .csrf(csrf -> csrf
+//                        // ✅ 문의 삭제 POST 요청에 대한 CSRF 검사를 무시합니다. (403 Forbidden 해결)
+//                        .ignoringRequestMatchers("/inquiries/my/delete", "/ping", "/api/footer/**")
+//                )
                 .oauth2Login(oauth -> oauth
                         .loginPage("/login")
                         .userInfoEndpoint(user -> user.userService(customOAuth2UserService)) // ✅ 수정 완료

@@ -29,3 +29,5 @@ public class Member {
     // 기본 사용자 역할
     private String role;
 }
+
+
