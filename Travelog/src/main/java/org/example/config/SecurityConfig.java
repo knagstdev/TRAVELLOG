@@ -12,9 +12,9 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        // 공개 경로
+                        // 인증 경로
                         .requestMatchers("/mypage").authenticated()
-                        // 그 외 경로는 인증 필요
+                        // 그 외 경로는 허용
                         .anyRequest().permitAll()
                 )
                 // 일반 로그인 설정
