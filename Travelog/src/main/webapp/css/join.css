@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 중앙 카드 */
+.join-box {
+    width: 420px;
+    background: #ffffff;
+    padding: 50px 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 제목 */
+.join-box h2 {
+    color: #0077b6;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+}
+
+/* 입력 필드 공통 구조 */
+.form-field {
+    display: flex;
+    flex-direction: column;  /* ✅ input + msg 세로 쌓기 */
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/* 일반 입력창 */
+.form-field input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.form-field input:focus {
+    border-color: #00b4d8;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
+}
+
+/* 이메일 + 인증버튼 (가로 정렬) */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #00b4d8;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
+}
+
+/* 인증번호 버튼 */
+.check-btn {
+    flex-shrink: 0;
+    width: 100px;
+    height: 42px;
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.check-btn:hover {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    box-shadow: 0 4px 8px rgba(0, 119, 182, 0.2);
+}
+
+/* 메시지 (입력창 아래 고정) */
+.msg {
+    display: block;
+    font-size: 0.85rem;
+    text-align: left;
+    padding-left: 4px;
+    height: 18px;          /* ✅ 높이 고정 */
+    line-height: 18px;
+    margin-top: 4px;
+    color: #666;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+/* 성공 / 오류 컬러 */
+.msg.error { color: red; }
+.msg.success { color: green; }
+
+/* 회원가입 버튼 */
+.join-box button[type="submit"] {
+    width: 100%;
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+    margin-top: 8px;
+}
+
+.join-box button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 119, 182, 0.25);
+}
+
+/* 링크 */
+.join-box a {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #0096c7;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.join-box a:hover {
+    text-decoration: underline;
+    color: #023e8a;
+}
